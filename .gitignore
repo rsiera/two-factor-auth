@@ -1,0 +1,9 @@
+*.db
+.DS_Store
+__pycache__
+.idea/*
+*.pyc
+static/node_modules
+static/.cache
+tests
+testing_config.py
