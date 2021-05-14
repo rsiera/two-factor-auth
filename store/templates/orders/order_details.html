@@ -1,0 +1,34 @@
+{% load i18n %}
+
+<ul>
+    <li class="table_list_row">
+        <span class="table_list_column width_100 text_left">{{ order.shipping_address }}</span>
+    </li>
+</ul>
+
+<div class="table_list">
+    <div class="table_list_header">
+        <span class="table_list_header_column table_list_column width_40">{% trans 'Item name' %}</span>
+        <span class="table_list_header_column table_list_column width_20 text_right">{% trans 'Quantity' %}</span>
+        <span class="table_list_header_column table_list_column width_20 text_right">{% trans 'Price per unit' %}</span>
+        <span class="table_list_header_column table_list_column width_20 text_right">{% trans 'Total price' %}</span>
+    </div>
+    <ul class="table_list_items">
+        {% for order_item in order.get_order_items %}
+            <li class="table_list_item {% cycle 'odd' 'even' %}">
+                <div class="table_list_row">
+                    <span class="table_list_column width_40">#{{ order_item.OrderId }} - {{ order_item.Name }}</span>
+                    <span class="table_list_column width_20 text_right">{{ order_item.Quantity }}</span>
+                    <span class="table_list_column width_20 text_right"> {{ order_item.Price }}</span>
+                    <span class="table_list_column width_20 text_right"> {{ order_item.total_price }}</span>
+                </div>
+                <div class="table_list_row">
+                        <span class="time_details_status width_100">
+                            <span class="item_detail">{% trans 'Shipping Status' %}: {{ order_item.Status }}</span>
+                            <span class="item_detail">{% trans 'Shipping Date' %}: {{ order_item.ship_date }}</span>
+                        </span>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,27 @@
+<Order>
+    <Id>10001</Id>
+    <OrderDate>2010-07-18 12:13:15</OrderDate>
+    <ShipFirstLastName>John Doe</ShipFirstLastName>
+    <ShipAddress>123 State St, Burlington, VT 05491</ShipAddress>
+    <TotalPrice>1381.50</TotalPrice>
+    <OrderDetail>
+        <OrderItem>
+            <Name>ACME Drill Set</Name>
+            <OrderId>39393</OrderId>
+            <ProductId>4847292</ProductId>
+            <Quantity>2</Quantity>
+            <ExpectedShipDate>2010-07-22</ExpectedShipDate>
+            <Price>500.00</Price>
+            <Status>Devivered</Status>
+        </OrderItem>
+        <OrderItem>
+            <Name>ACME Other thing</Name>
+            <OrderId>39394</OrderId>
+            <ProductId>979826</ProductId>
+            <Quantity>1</Quantity>
+            <ExpectedShipDate>2010-07-18</ExpectedShipDate>
+            <Price>150.00</Price>
+            <Status>Send</Status>
+        </OrderItem>
+    </OrderDetail>
+</Order>
